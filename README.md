@@ -4,7 +4,7 @@
 
 # Ai Bom Mcp
 
-**Immutable audit trails with SHA-256 hash chain verification for compliance certifications**
+**Generate + audit AI Bills of Materials for US federal procurement (EO 14028), EU AI Act Annex IV, NIST AI RMF, and ISO 42001.**
 
 [![npm version](https://img.shields.io/npm/v/@meok-ai/ai-bom-mcp)](https://www.npmjs.com/package/@meok-ai/ai-bom-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
