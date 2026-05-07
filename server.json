@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "CSOAI-ORG/ai-bom-mcp",
+  "version": "1.0.0",
+  "description": "Ai Bom MCP Server by MEOK AI Labs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/ai-bom-mcp",
+    "source": "https://github.com/CSOAI-ORG/ai-bom-mcp"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "ai-bom-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "python",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
