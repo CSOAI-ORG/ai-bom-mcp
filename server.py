@@ -118,6 +118,18 @@ def generate_ai_bom(
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        model_name (str): The model name to analyze or process.
+        model_version (str): The model version to analyze or process.
+        organisation (str): The organisation to analyze or process.
+        licence (str): The licence to analyze or process.
+        architecture (str): The architecture to analyze or process.
+        parameter_count (str): The parameter count to analyze or process.
+        training_datasets (str): The training datasets to analyze or process.
+        format (str): The format to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -249,6 +261,11 @@ def audit_ai_bom_completeness(ai_bom_json: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        ai_bom_json (str): The ai bom json to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -320,6 +337,12 @@ def map_to_regulation(ai_bom_json: str, regulation: str = "eu_ai_act", api_key: 
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        ai_bom_json (str): The ai bom json to analyze or process.
+        regulation (str): The regulation to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -420,6 +443,10 @@ def required_fields(api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
