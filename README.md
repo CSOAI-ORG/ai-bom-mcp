@@ -1,3 +1,5 @@
+[![ai-bom-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/ai-bom-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/ai-bom-mcp)
+
 <div align="center">
 
 [![PyPI](https://img.shields.io/pypi/v/ai-bom-mcp)](https://pypi.org/project/ai-bom-mcp/)
