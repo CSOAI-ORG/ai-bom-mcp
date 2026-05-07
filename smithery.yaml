@@ -1,0 +1,28 @@
+name: ai-bom-mcp
+description: 'Ai Bom tools for AI agents. Built by MEOK AI Labs.'
+version: 1.0.0
+tools:
+- name: generate_ai_bom
+  description: 'Generate Ai Bom operation.'
+  parameters:
+  - name: input
+    type: string
+    required: true
+- name: audit_ai_bom_completeness
+  description: 'Audit Ai Bom Completeness operation.'
+  parameters:
+  - name: input
+    type: string
+    required: true
+- name: map_to_regulation
+  description: 'Map To Regulation operation.'
+  parameters:
+  - name: input
+    type: string
+    required: true
+- name: required_fields
+  description: 'Required Fields operation.'
+  parameters:
+  - name: input
+    type: string
+    required: true
