@@ -103,7 +103,22 @@ def generate_ai_bom(
     api_key: str = "",
 ) -> str:
     """Generate an AI-BOM in CycloneDX ML-BOM format (or SPDX 3.0) with all 10 required
-    field categories. Provides the skeleton for compliance submission."""
+    field categories. Provides the skeleton for compliance submission.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
@@ -204,7 +219,23 @@ def generate_ai_bom(
 @mcp.tool()
 def audit_ai_bom_completeness(ai_bom_json: str, api_key: str = "") -> str:
     """Audit an existing AI-BOM for completeness against the 10 required field categories.
-    Returns per-category pass/fail + gap list."""
+    Returns per-category pass/fail + gap list.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
@@ -245,7 +276,23 @@ def audit_ai_bom_completeness(ai_bom_json: str, api_key: str = "") -> str:
 @mcp.tool()
 def map_to_regulation(ai_bom_json: str, regulation: str = "eu_ai_act", api_key: str = "") -> str:
     """Map an AI-BOM against a specific regulatory framework's technical documentation
-    requirements. Supported: eu_ai_act, nist_ai_rmf, us_eo_14028, iso_42001."""
+    requirements. Supported: eu_ai_act, nist_ai_rmf, us_eo_14028, iso_42001.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
@@ -315,7 +362,23 @@ def map_to_regulation(ai_bom_json: str, regulation: str = "eu_ai_act", api_key: 
 
 @mcp.tool()
 def required_fields(api_key: str = "") -> str:
-    """List the 10 required AI-BOM field categories and their fields."""
+    """List the 10 required AI-BOM field categories and their fields.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg})
