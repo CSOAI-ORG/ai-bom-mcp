@@ -53,8 +53,8 @@ def check_access(api_key: str = ""):
 
 FREE_DAILY_LIMIT = 10
 _usage: dict[str, list[datetime]] = defaultdict(list)
-STRIPE_199 = "https://buy.stripe.com/14A4gB3K4eUWgYR56o8k836"
-STRIPE_1499 = "https://buy.stripe.com/4gM9AV80kaEG0ZT42k8k837"
+STRIPE_199 = "https://buy.stripe.com/14A4gB3K4eUWgYR56o8k836?utm_source=mcp&utm_medium=tool&utm_content=ratelimit_tail"
+STRIPE_1499 = "https://buy.stripe.com/4gM9AV80kaEG0ZT42k8k837?utm_source=mcp&utm_medium=tool&utm_content=ratelimit_tail"
 
 
 def _rl(tier: str = "free") -> Optional[str]:
