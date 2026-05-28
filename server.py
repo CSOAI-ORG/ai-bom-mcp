@@ -53,7 +53,7 @@ def check_access(api_key: str = ""):
 
 FREE_DAILY_LIMIT = 10
 _usage: dict[str, list[datetime]] = defaultdict(list)
-STRIPE_199 = "https://buy.stripe.com/14A4gB3K4eUWgYR56o8k836?utm_source=mcp&utm_medium=tool&utm_content=ratelimit_tail"
+STRIPE_199 = "https://buy.stripe.com/eVq14pcgAcMO9wp7ew8k90N?utm_source=mcp&utm_medium=tool&utm_content=ratelimit_tail"
 STRIPE_1499 = "https://buy.stripe.com/4gM9AV80kaEG0ZT42k8k837?utm_source=mcp&utm_medium=tool&utm_content=ratelimit_tail"
 
 
@@ -64,7 +64,7 @@ def _rl(tier: str = "free") -> Optional[str]:
     cutoff = now - timedelta(days=1)
     _usage["anonymous"] = [t for t in _usage["anonymous"] if t > cutoff]
     if len(_usage["anonymous"]) >= FREE_DAILY_LIMIT:
-        return f"Free tier limit ({FREE_DAILY_LIMIT}/day). Unlock unlimited generation + signed AI-BOM export for Pro £199/mo: {STRIPE_199}"
+        return f"Free tier limit ({FREE_DAILY_LIMIT}/day). Unlock unlimited generation + signed AI-BOM export for Pro £29/mo: {STRIPE_199}"
     _usage["anonymous"].append(now)
     return None
 
