@@ -76,3 +76,28 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 <p align="center">
   <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
 </p>
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "ai-bom-mcp": {
+      "command": "uvx",
+      "args": ["ai-bom-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install ai-bom-mcp` then run the `ai-bom-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `generate_ai_bom` to …"
+- "Use `audit_ai_bom_completeness` to …"
+- "Use `map_to_regulation` to …"
