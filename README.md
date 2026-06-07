@@ -1,3 +1,4 @@
+<!-- mcp-name: io.github.CSOAI-ORG/ai-bom-mcp -->
 # Ai Bom MCP
 
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
