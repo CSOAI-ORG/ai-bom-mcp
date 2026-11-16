@@ -55,8 +55,8 @@ def check_access(api_key: str = ""):
 
 FREE_DAILY_LIMIT = 50
 _usage: dict[str, list[datetime]] = defaultdict(list)
-STRIPE_199 = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t?utm_source=mcp&utm_medium=tool&utm_content=ratelimit_tail"
-STRIPE_1499 = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t?utm_source=mcp&utm_medium=tool&utm_content=ratelimit_tail"
+STRIPE_199 = "https://meok.ai/pricing"
+STRIPE_1499 = "https://meok.ai/pricing"
 
 
 def _rl(tier: str = "free") -> Optional[str]:
@@ -66,7 +66,7 @@ def _rl(tier: str = "free") -> Optional[str]:
     cutoff = now - timedelta(days=1)
     _usage["anonymous"] = [t for t in _usage["anonymous"] if t > cutoff]
     if len(_usage["anonymous"]) >= FREE_DAILY_LIMIT:
-        return f"Free tier limit ({FREE_DAILY_LIMIT}/day). Unlock unlimited generation + signed AI-BOM export for Pro £29/mo: {STRIPE_199}"
+        return f"Free tier limit ({FREE_DAILY_LIMIT}/day). Unlock unlimited generation + signed AI-BOM export for Pro a per-job quote: {STRIPE_199}"
     _usage["anonymous"].append(now)
     return None
 
@@ -528,10 +528,10 @@ if __name__ == "__main__":
     main()
 
 
-# ── MEOK monetization layer (Stripe upgrade · PAYG · pricing) ──────────
-# Free tier is zero-config. Upgrade to Pro (unlimited) or pay-as-you-go per call.
+# ── MEOK pricing pointer (pay per delivered job; no subscriptions) ──────────
+# No tiers. Jobs are quoted individually at https://meok.ai/pricing.
 import os as _meok_os
-MEOK_STRIPE_UPGRADE = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"  # Pro (unlimited)
+MEOK_STRIPE_UPGRADE = "https://meok.ai/pricing"  # Pro (unlimited)
 MEOK_PAYG_KEY = _meok_os.environ.get("MEOK_PAYG_KEY", "")  # set to enable PAYG (x402 / ~GBP0.05 per call)
 MEOK_PRICING = "https://meok.ai/pricing"
 
